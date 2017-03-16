@@ -27,8 +27,7 @@ describe('<FilteredFruitList />', () => {
   let wrapper;
 
   beforeEach(() => {
-    wrapper = !FilteredFruitList.prototype ? shallow(<Noop />) :
-      shallow(<FilteredFruitList fruit={fruit} filter={null} />);
+    wrapper = !FilteredFruitList.prototype ? shallow(<Noop />) : shallow(<FilteredFruitList fruit={fruit} filter={null} />);
   });
 
   it('should be a stateless functional component', () => {
@@ -52,7 +51,7 @@ describe('<FilteredFruitList />', () => {
   });
 
   it('should have a top-level ul element with class "fruit-list"', () => {
-    expect(wrapper.find('ul').hasClass('fruit-list')).toBeTruthy(); 
+    expect(wrapper.find('ul').hasClass('fruit-list')).toBeTruthy();
   });
 
   it('should render entire fruit list when filter is null', () => {
